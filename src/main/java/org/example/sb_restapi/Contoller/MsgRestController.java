@@ -19,6 +19,4 @@ public class MsgRestController {
         String s = "Good Morning";
         return new ResponseEntity<>(s, HttpStatus.OK);
     }
-
 }
-

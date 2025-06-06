@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductRestController {
 
-    @GetMapping("/product")
+    @GetMapping(value="/product", produces = "application/json")
     public String getProductInfo(@RequestParam("id") Integer id) {
         String msg = "";
 
@@ -23,7 +23,7 @@ public class ProductRestController {
         return msg;
     }
 
-    @GetMapping("/product/{id}")
+    @GetMapping(value="/product/{id}", produces="application/json")
     public String getProductInFo(@PathVariable("id") Integer id) {
         String msg = "";
 
@@ -37,5 +37,4 @@ public class ProductRestController {
         }
         return msg;
     }
-
 }
